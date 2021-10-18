@@ -1,0 +1,10 @@
+.dr-img{
+    height: 300px;
+}
+.icon-color{
+color: darkgray;
+padding-left: 15px;
+}
+.icon-color:hover{
+color: crimson;
+}

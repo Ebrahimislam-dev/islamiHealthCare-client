@@ -1,6 +1,9 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import About from './components/About/About';
+import Appointments from './components/appointments/Appointments';
+import Contactus from './components/contact/Contactus';
+import Doctors from './components/doctors/Doctors';
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
 import Home from './components/home/Home';
@@ -24,20 +27,22 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            <Route path="/about">
-              <About></About>
-            </Route>
             <Route path="/services">
               <Services></Services>
             </Route>
+            <Route path="/appointments">
+              <Appointments></Appointments>
+            </Route>
             <Route path="/doctors">
-
+              <Doctors></Doctors>
+            </Route>
+            <Route path="/about">
+              <About></About>
             </Route>
 
-
-
-
-
+            <Route path="/contact">
+              <Contactus></Contactus>
+            </Route>
             <Route path="/login">
               <Login></Login>
             </Route>

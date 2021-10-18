@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../images/favicon.png'
 
@@ -26,34 +26,28 @@ const Header = () => {
                         <NavLink to='/home' activeStyle={active} className='nav-item text-white text-decoration-none'>
                             Home
                         </NavLink>
+                        <NavLink to='/services' activeStyle={active} className='nav-item text-white text-decoration-none'>
+                            Services
+                        </NavLink>
+
+                        <NavLink to='/doctors' activeStyle={active} className='nav-item text-white text-decoration-none'>
+                            Doctors
+                        </NavLink>
+                        <NavLink to='/appointments' activeStyle={active} className='nav-item text-white text-decoration-none'>
+                            Appointments
+                        </NavLink>
                         <NavLink to='/about' activeStyle={active} className='nav-item text-white text-decoration-none'>
                             About-Us
                         </NavLink>
                         <NavLink to='/contact' activeStyle={active} className='nav-item text-white text-decoration-none'>
                             Contact-Us
                         </NavLink>
-                        <NavLink to='/services' activeStyle={active} className='nav-item text-white text-decoration-none'>
-                            {/* <NavDropdown title="Services" id="collasible-nav-dropdown">
-                                <NavDropdown.Item className="bg-dark text-white-50" href="#action/3.1">ULTRASONOGRAPHY</NavDropdown.Item>
-                                <NavDropdown.Item className="bg-dark text-white-50" href="#action/3.1">CT SCAN</NavDropdown.Item>
-                                <NavDropdown.Item className="bg-dark text-white-50" href="#action/3.1">CARDIOLOGY</NavDropdown.Item>
-                                <NavDropdown.Item className="bg-dark text-white-50" href="#action/3.1">MRI</NavDropdown.Item>
-                                <NavDropdown.Item className="bg-dark text-white-50" href="#action/3.1">Neurological</NavDropdown.Item>
-                                <NavDropdown.Item className="bg-dark text-white-50" href="#action/3.1">Digital Xray</NavDropdown.Item>
-                                <NavDropdown.Item className="bg-dark text-white-50" href="#action/3.1">HOME SERVICE</NavDropdown.Item>
-                                <NavDropdown.Item className="bg-dark text-white-50" href="#action/3.1">ICU</NavDropdown.Item>
-
-                            </NavDropdown> */}
-                            Services
-                        </NavLink>
 
 
                     </Nav>
                     <Nav>
-                        <Nav.Link href="#deets">More deets</Nav.Link>
-                        <Nav.Link eventKey={2} href="#memes">
-                            LogIN
-                        </Nav.Link>
+                        
+                        <NavLink to='/login' activeStyle={active} className='nav-item text-white text-decoration-none fs-5 d-flex'> <p >Ebrahim</p> <i class="fas fa-sign-in-alt"></i> LOG IN</NavLink>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
