@@ -1,0 +1,25 @@
+.services{
+    background-color: rgba(245, 245, 220, 0.253);
+}
+.card-body{
+    height: 300px;
+
+    display: inline-block;
+    vertical-align: middle;
+    
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+   
+    transition-duration: 0.5s;
+    
+    transition-property: transform;
+}
+.card-img{
+    height: 200px;
+}
+.card-body:hover{
+    
+    background: linear-gradient(to right, #ffefba1e, #ffffff); 
+    transition: 0.5s;
+    transform: scale(1.1);
+}
