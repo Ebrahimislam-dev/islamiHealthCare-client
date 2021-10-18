@@ -1,6 +1,19 @@
 .services{
     background-color: rgba(245, 245, 220, 0.253);
 }
+.heading{
+ 
+    font-family: Georgia, sans-serif;
+    font-size: 5em;
+    letter-spacing: -2px;
+   
+        /* font-family: "Trebuchet MS", sans-serif;
+        font-size: 5em;
+        letter-spacing: -2px;
+        border-bottom: 2px solid black;
+        text-transform: uppercase; */
+       
+}
 .card-body{
     height: 300px;
 

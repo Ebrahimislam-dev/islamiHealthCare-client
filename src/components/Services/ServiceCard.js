@@ -17,7 +17,7 @@ const ServiceCard = (props) => {
                             <Card.Title className="text-center fw-bold">{servicename}</Card.Title>
                             <Card.Text>
                                 <h5>
-                                    About Service: <small className="fs-6 text-start"> {aboutservice}</small>
+                                    About Service: <small className="pb-3 fs-6 text-start"> {aboutservice}</small>
                                 </h5>
 
 

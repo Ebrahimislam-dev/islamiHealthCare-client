@@ -2,31 +2,31 @@ import React from 'react';
 
 const About = () => {
     return (
-        <div>
+        <div className="services lh-lg">
 
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-md-12">
-                        <div className="page-title bg-success bg-opacity-25 py-3 ">
-                            <h5 className="fs-1 fst-italic">MISSION & VISSION</h5>
+                        <div className=" page-title bg-success bg-opacity-25 py-3 ">
+                            <h5  className="heading fs-1">MISSION & VISSION</h5>
                         </div>
                     </div>
                 </div>
             </div>
 
 
-            <div className="container">
+            <div className="container mt-3">
                 <div className="row">
                     <div className="col-md-12">
                         <div className="row">
                             <div className="col-md-4">
-                                <img className=" h-100 w-100" src="http://www.epichcl.com//public/storage/pages/May2018/background-image-for-mission-vission.jpg" alt="" />
+                                <img className="card-body h-100 w-100" src="https://i.ibb.co/YkP45pV/background-image-for-mission-vission.jpg" alt="" />
 
                             </div>
                             <div className="col-md-7 text-start">
                                 <h4 className="text-success">BACKGROUND</h4>
                                 <p>To make an effective management plan for treating the patient, an authentic diagnostic report is an inevitable part. Consultants face a great deal in getting authentic medical diagnostic report as well as having lack of well decorated professionally managed consultant chambers at a suitable location in the commercial capital of Bangladesh,&nbsp; Chittagong. Sometimes a patient has to go to Dhaka or abroad to do the test due to unavailability which is time-consuming and causes the financial burden for the patient &amp; delay in getting the report, also delay in patient's treatment. Besides, &nbsp;a patient has to move from one diagnostic facility to another, as all facilities are not available under one roof. An emergency report is required mainly for the hospital admitted patient where prompt service is most desired but there is lack of these services in the city.</p>
-                                <p>Realizing these needs of consultant doctors, patient and the community with great care and anticipation to fulfill its social responsibility, Epic Properties Limited has devoted itself to establish a `One Stop Medical Diagnostic institute’ with a specialized Consultant chamber facility – “Epic Health Care Ltd”</p>
+                                <p>Realizing these needs of consultant doctors, patient and the community with great care and anticipation to fulfill its social responsibility, Epic Properties Limited has devoted itself to establish a `One Stop Medical Diagnostic institute’ with a specialized Consultant chamber facility – “Islamic Health Care Ltd”</p>
                             </div>
                         </div>
                         <div className="row mt-5">

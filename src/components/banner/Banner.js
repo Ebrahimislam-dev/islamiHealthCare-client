@@ -15,16 +15,13 @@ const Banner = () => {
                 <Carousel.Item interval={1000} >
                     <Carousel.Caption >
                         <div className="  pe-5 pb-5 mb-5 text-center">
-                            <h1 className="fs-1 me-5 pe-5 font-monospace fw-bold text-success">WELCOME TO ISLAMI HEALTH CARE</h1>
-                            <p className="fs-4 px-3 text-black fst-italic">We are team of talented doctors making your life happiness</p>
+                            <h1 className=" text-black-50 heading">WELCOME TO ISLAMI HEALTH CARE</h1>
+                            <p className="fs-4 px-3 text-danger fw-bold fst-italic">We are team of talented doctors making your life happiness</p>
                         </div>
                         <div className="  pb-5 mb-5 me-5 text-center">
-                            <Button className="btn btn-danger">GET STARTED</Button>
+                            <Button className="btn btn-danger px-3 py-2 fw-bold">GET STARTED</Button>
                         </div>
-                        <div className="  pb-5 mb-5 text-center">
-                        </div>
-                        <div className="  pb-5 mb-5  text-center">
-                        </div>
+                        
                     </Carousel.Caption>
                     <img
                         className="d-block w-100 slide-item"

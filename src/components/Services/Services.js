@@ -11,7 +11,7 @@ const Services = () => {
     return (
         <div className='services'>
             <div className="container-fluid  mb-1">
-                <h1 className="text-black mb-5 mt-1">
+                <h1 className="heading mb-5 mt-1">
                     Our <span className="text-danger"> Services </span>
                 </h1>
                 <Row xs={1} md={4} className="g-3 ">
