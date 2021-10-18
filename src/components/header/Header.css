@@ -1,0 +1,11 @@
+.header-navbar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-item {
+    padding: 11px 30px;
+  }
+  
