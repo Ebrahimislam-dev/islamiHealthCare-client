@@ -25,11 +25,11 @@ const Booking = () => {
         <div>
             <div className="container-fluid  mb-1">
                 <h1 className="heading mb-5 mt-1">
-                   <span className="text-danger"> {singleService[0]?.servicename} </span>
+                    <span className="text-danger"> {singleService[0]?.servicename} </span>
                 </h1>
                 <Row xs={1} md={2} className="g-3 ">
                     <div className="container-fluid">
-                       
+
                         <div className="container" >
                             <Col>
                                 <Card className=" mb-5">
@@ -50,7 +50,7 @@ const Booking = () => {
                                             <button className="btn btn-outline-dark px-5 border-2 rounded-4 fw-bold fst-italic">Book Another Service</button>
                                         </Link>
                                         <Link to="/appointments">
-                                            <button className="btn btn-outline-dark ms-3 px-5 border-2 rounded-4 fw-bold fst-italic">Confirm Booking</button>
+                                            <button  className="btn btn-outline-dark ms-3 px-5 border-2 rounded-4 fw-bold fst-italic">Confirm Booking</button>
                                         </Link>
                                     </Card.Footer>
                                 </Card>

@@ -10,6 +10,7 @@ import Header from './components/header/Header';
 import Home from './components/home/Home';
 import Login from './components/login/Login';
 import NotFound from './components/notFound/NotFound';
+import PrivateRoute from './components/privateRoute/PrivateRoute';
 import Register from './components/register/Register';
 import Services from './components/Services/Services';
 import AuthProvider from './context/AuthProvider';
@@ -31,9 +32,7 @@ function App() {
             <Route path="/services">
               <Services></Services>
             </Route>
-            <Route path="/appointments">
-              <Appointments></Appointments>
-            </Route>
+            
             <Route path="/doctors">
               <Doctors></Doctors>
             </Route>
@@ -50,9 +49,14 @@ function App() {
             <Route path="/register">
               <Register></Register>
             </Route>
-            <Route path="/booking/:servicesId">
+            <PrivateRoute path="/appointments">
+              <Appointments></Appointments>
+            </PrivateRoute>
+            <PrivateRoute path="/booking/:servicesId">
               <Booking></Booking>
-            </Route>
+            </PrivateRoute>
+
+
 
             <Route path="/*">
               <NotFound></NotFound>

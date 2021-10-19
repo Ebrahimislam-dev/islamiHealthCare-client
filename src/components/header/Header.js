@@ -1,12 +1,14 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 import logo from '../../images/favicon.png'
 
 import "./Header.css"
 
 
 const Header = () => {
+    const { user, logOut } = useAuth()
     // active style for navbar
     const active = {
         fontWeight: "bold",
@@ -46,8 +48,17 @@ const Header = () => {
 
                     </Nav>
                     <Nav>
-                        
-                        <NavLink to='/login' activeStyle={active} className='nav-item text-white text-decoration-none fs-5 d-flex'> <p >Ebrahim</p> <i class="fas fa-sign-in-alt"></i> LOG IN</NavLink>
+                        {
+                            user.email && <span className="text-white-50">{user.displayName}</span>
+                        }
+                        {
+                            user.email ?
+
+                                <NavLink onClick={logOut} to="/login">Log Out</NavLink>
+                                :
+
+                                <NavLink to="/login">Log in</NavLink>
+                        }
                     </Nav>
                 </Navbar.Collapse>
             </Container>

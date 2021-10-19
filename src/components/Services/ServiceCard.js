@@ -4,9 +4,13 @@ import { Link } from 'react-router-dom';
 import './Services.css'
 
 const ServiceCard = ({ service }) => {
-    // destructuring
-    const { key, servicename, aboutservice, img} = service;
 
+    // destructuring
+    const { key, servicename, aboutservice, img } = service;
+    // const history = useHistory();
+    // const handleBooking = () => {
+    //     history.push('/booking');
+    // }
     return (
         <div className="container-fluid">
             {/* Services card dynamically */}
@@ -25,7 +29,7 @@ const ServiceCard = ({ service }) => {
                             </Card.Text>
                         </Card.Body>
                         <Card.Footer>
-                            <Link to={ `/booking/${key}`}>
+                            <Link to={`/booking/${key}`}>
                                 <button className="btn btn-outline-dark px-5 border-2 rounded-4 fw-bold fst-italic">Book {servicename.toLowerCase()}</button>
                             </Link>
                         </Card.Footer>
