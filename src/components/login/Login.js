@@ -3,7 +3,7 @@ import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
-    const { signInUsingGoogle, handleRegistration, handleNameChange, name } = useAuth()
+    const { signInUsingGoogle } = useAuth()
     const location = useLocation();
     const history = useHistory();
     const redirect_uri = location.state?.from || '/home'
@@ -22,20 +22,11 @@ const Login = () => {
                 <div className="text-center">
                     <h2 className="heading"> PLEASE <span className="text-danger">LOG IN</span> </h2>
                     <form className="row g-3 ms-5 justify-content-sm-start justify-content-md-center">
-                        <div className="d-flex justify-content-evenly col-md-8 ">
-                            <div><label for="inputEmail" className="form-label me-md-5 fs-3">Email: </label></div>
-                            <div>
-                                <input type="email" className="form-control ms-md-5" id="inputEmail" placeholder="Enter A Valid Email" />
-                            </div>
-                        </div>
-                        <div className="d-flex justify-content-evenly align-items-center col-md-8">
-                            <div>  <label htmlFor="password" className="form-label me-5 fs-3">Password</label></div>
-                            <div><input type="password" className="form-control" id="inputPassword" placeholder="Enter Your Password" /> </div>
-                        </div>
+
 
 
                         <div className="col-8 align-items-center">
-                            <button onClick={handleRegistration} type="submit" className="btn btn-danger border-5 mb-3 mt-3 fs-5 fst-italic px-5 text-center">Login</button>
+                            <button type="submit" className="btn btn-danger border-5 mb-3 mt-3 fs-5 fst-italic px-5"><Link className="  text-white text-decoration-none"  to="/register">Login With Email and Password</Link> </button>
                         </div>
                     </form>
                     <p>New To Islamic Health Care? <Link to="/register">Create an Account</Link></p>

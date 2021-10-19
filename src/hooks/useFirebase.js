@@ -21,7 +21,7 @@ const useFirebase = () => {
 
 
 
-
+// Authenticatopn For email & password
 
     const handleNameChange = e => {
         setName(e.target.value);
@@ -88,7 +88,7 @@ const useFirebase = () => {
             .then(result => { })
     }
 
-
+// Authentication For Google login System
 
     const signInUsingGoogle = () => {
         setIsLoading(true);

@@ -19,7 +19,7 @@ const Register = () => {
     return (
         <div className="mx-5">
             <form onSubmit={handleRegistration} className="bg-light shadow-lg mt-5">
-                <h3 className=" heading">Please <span className="text-danger">Register</span></h3>
+                <h3 className=" heading">Please <span className="text-danger">Login or Register</span></h3>
                 {!isLogin && <div className="row mb-3">
                     <label htmlFor="inputName" className="col-sm-2 col-form-label">Name</label>
                     <div className="col-sm-10">
@@ -40,10 +40,13 @@ const Register = () => {
                 </div>
                 <div className="row mb-3">
                     <div className="col-sm-10 offset-sm-2">
-                        <Link to="/login">Already Registered?</Link>
+                        <Link to="/login">Login with Google</Link>
                     </div>
                 </div>
                 <div className="row mb-3 text-danger">{error}</div>
+                <button type="submit" className="btn btn-danger px-3 py-2 me-5">
+                    Login
+                </button>
                 <button type="submit" className="btn btn-danger px-3 py-2 me-5">
                     Register
                 </button>
@@ -51,9 +54,9 @@ const Register = () => {
 
             </form>
             <br />
-            <h1>OR</h1>
+            
 
-            <Button className="btn btn-danger px-3 py-2 me-5" variant="dark" onClick={singWithGoogle}>Google Sign In</Button>
+            <Button className=" px-3 py-2 me-5" variant="dark" onClick={singWithGoogle}></Button>
             <br />
             <br />
         </div>
