@@ -5,7 +5,7 @@ import {
     faFacebookSquare,
     faInstagramSquare,
     faTwitterSquare,
-    
+
     faGoogle,
 } from "@fortawesome/free-brands-svg-icons";
 import { Link } from 'react-router-dom';
@@ -35,31 +35,31 @@ const DoctorsCard = (props) => {
 
                                 <div className="d-flex  text-center  ">
                                     <div className=" me-3 fs-3  icon-color">
-                                        <Link to="/doctors" className=" icon-color">
+                                        <Link to="/*" className=" icon-color">
                                             <FontAwesomeIcon icon={faGoogle} />
                                         </Link>
 
                                     </div>
                                     <div className="me-3 fs-3">
-                                        <Link to="/doctors" className=" icon-color">
+                                        <Link to="/*" className=" icon-color">
                                             <FontAwesomeIcon icon={faFacebookSquare} />
                                         </Link>
 
                                     </div>
                                     <div className=" me-3 fs-3">
-                                        <Link to="/doctors" className=" icon-color">
+                                        <Link to="/*" className=" icon-color">
                                             <FontAwesomeIcon icon={faInstagramSquare} />
                                         </Link>
 
                                     </div>
 
                                     <div className=" me-3 fs-3">
-                                        <Link to="/doctors" className=" icon-color">
+                                        <Link to="/*" className=" icon-color">
                                             <FontAwesomeIcon icon={faTwitterSquare} />
                                         </Link>
 
                                     </div>
-                                    
+
 
                                 </div>
 

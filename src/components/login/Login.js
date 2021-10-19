@@ -14,29 +14,43 @@ const Login = () => {
             })
 
     }
+
+    const handleSubmit=()=>{
+
+    }
     return (
         <div className="d-flex align-items-center justify-content-center container">
             <div>
                 <div className="text-center">
-                    <h2>Log In</h2>
-                    <form onSubmit="">
-                        <input type="email" name="" id="" placeholder="Your Email" />
-                        <br /> <br />
-                        <input type="password" name="" id="" placeholder=" Your password" />
-                        <br /> <br />
-                        <input type="submit" value="Submit" />
+                    <h2 className="heading"> PLEASE <span className="text-danger">LOG IN</span> </h2>
+                    <form className="row g-3 ms-5 justify-content-center">
+                        <div className="d-flex justify-content-evenly col-md-8">
+                            <div><label for="inputEmail" className="form-label me-5 fs-3">Email: </label></div>
+                            <div>
+                                <input type="email" className="form-control ms-5" id="inputEmail" placeholder="Enter a valaid Email" />
+                            </div>
+                        </div>
+                        <div className="d-flex justify-content-evenly align-items-center col-md-8">
+                            <div>  <label htmlFor="password" className="form-label me-5 fs-3">Password</label></div>
+                            <div><input type="password" className="form-control" id="inputPassword" placeholder="Enter Your Password" /> </div>
+                        </div>
 
+                        
+                        <div className="col-8">
+                            <button onClick={handleSubmit} type="submit" className="btn btn-danger border-5 mb-3 mt-3 fs-5 fst-italic px-5 text-center">Submit</button>
+                        </div>
                     </form>
-                    <p>New To Ema-John? <Link to="/register">Create an Account</Link></p>
+                    <p>New To Islamic Health Care? <Link to="/register">Create an Account</Link></p>
                 </div>
                 <div className="text-center">
-                    <h4>-----------------------------OR Log in Using-------------------------- </h4>
-                    <button 
-                    
-                        className="btn-regular text-center"
+                    <h2>-------------------------OR Log in Using-------------------------</h2>
+                    <button
+
+                        className="btn btn-danger border-5 mb-3 mt-3 fs-5 fst-italic px-5 py-2  text-center"
                         onClick={handleGoogleLogin}
                     >
-                        Google
+                        <div></div> <div></div>
+                        <i className="fab fa-google me-3 fs-4"></i>  Google
                     </button>
                 </div>
             </div>

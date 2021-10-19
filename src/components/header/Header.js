@@ -22,8 +22,9 @@ const Header = () => {
                 <Navbar.Brand className="d-flex align-items-center"><Link to="/home"><img className="w-50" src={logo} alt="" /></Link>
                     {
                         user.email && <div className="d-flex align-items-center">
-                            <span className='nav-item text-white text-decoration-none'>{user.displayName}</span>
                             <img className=" w-25 rounded-circle" src={user.photoURL} alt="user-img" />
+                            <span className='nav-item text-white text-decoration-none fs-6 fst-italic'>{user.displayName}</span>
+
                         </div>
                     }
                 </Navbar.Brand>
