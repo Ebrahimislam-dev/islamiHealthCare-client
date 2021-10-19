@@ -31,7 +31,8 @@ const Login = () => {
                 </div>
                 <div className="text-center">
                     <h4>-----------------------------OR Log in Using-------------------------- </h4>
-                    <button
+                    <button 
+                    
                         className="btn-regular text-center"
                         onClick={handleGoogleLogin}
                     >

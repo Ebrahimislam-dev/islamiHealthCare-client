@@ -19,7 +19,14 @@ const Header = () => {
     return (
         <Navbar className="p-0 m-0" collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container className="p-0 m-0">
-                <Navbar.Brand><Link to="/home"><img className="w-50" src={logo} alt="" /></Link></Navbar.Brand>
+                <Navbar.Brand className="d-flex align-items-center"><Link to="/home"><img className="w-50" src={logo} alt="" /></Link>
+                    {
+                        user.email && <div className="d-flex align-items-center">
+                            <span className='nav-item text-white text-decoration-none'>{user.displayName}</span>
+                            <img className=" w-25 rounded-circle" src={user.photoURL} alt="user-img" />
+                        </div>
+                    }
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
@@ -46,18 +53,17 @@ const Header = () => {
                         </NavLink>
 
 
+
                     </Nav>
                     <Nav>
-                        {
-                            user.email && <span className="text-white-50">{user.displayName}</span>
-                        }
+
                         {
                             user.email ?
 
-                                <NavLink onClick={logOut} to="/login">Log Out</NavLink>
+                                <NavLink activeStyle={active} className='nav-item text-white text-decoration-none' onClick={logOut} to="/login">LogOut <i class="fas fa-sign-out-alt"></i></NavLink>
                                 :
 
-                                <NavLink to="/login">Log in</NavLink>
+                                <NavLink activeStyle={active} className='nav-item text-white text-decoration-none' to="/login">Log in <i class="fas fa-sign-in-alt"></i></NavLink>
                         }
                     </Nav>
                 </Navbar.Collapse>
