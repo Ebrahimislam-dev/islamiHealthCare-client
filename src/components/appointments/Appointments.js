@@ -5,7 +5,7 @@ const Appointments = () => {
         <div className="container-fluid">
             <div className="onlineDr">
                 <h3 className="heading ">ONLINE DOCTOR<span className="text-danger fs-4"> APPOINTMENT</span></h3>
-                <div className="text-start container">
+                <div className="text-start container mb-2">
                     <h4 className="fw-bold fs-3"><i class="fas fa-arrows-alt"></i> What do you need <span className="text-danger">?</span></h4>
                     <ul className="fs-4">
                         <li>Internet access.</li>
@@ -23,57 +23,67 @@ const Appointments = () => {
                             - By credit card, debit card, mobile banking, internet banking from payment.uhlbd.com</li>
                         <li>Need to call to verify the payment. Unless payment is made 5-6 hours before telemedicine appointment time, appointment will not be confirmed</li>
                         <li>Patient can send his/her Investigations prior to TM for doctor assessment to appointment@ihc.com</li>
+                    <br />
                     </ul>
                 </div>
             </div>
 
             <div className="offlineDr">
-                <h3 className="heading">OFFLINE DOCTOR<span className="text-danger fs-4"> APPOINTMENT</span></h3>
+                <h3 className="heading ">OFFLINE DOCTOR<span className="text-danger fs-4"> APPOINTMENT</span></h3>
                 <div>
-                    <form className="row g-3 ms-5">
-                        <div className="d-flex col-md-8">
-                            <label for="inputEmail4" className="form-label me-5">Email: </label>
-                            <input type="email" className="form-control" id="inputEmail4" />
+                    <form className="row g-3 ms-5 justify-content-center">
+                        <div className="d-flex justify-content-evenly col-md-8">
+                            <div><label for="inputEmail4" className="form-label me-5">Email: </label></div>
+                            <div>
+                                <input type="email" className="form-control" id="inputEmail4" placeholder="Enter a valaid Email" />
+                            </div>
                         </div>
-                        <div className="d-flex col-md-8">
-                            <label htmlFor="inputtext" className="form-label me-5">Name</label>
-                            <input type="text" className="form-control" id="inputtext" />
+                        <div className="d-flex justify-content-evenly align-items-center col-md-8">
+                            <div>  <label htmlFor="inputtext" className="form-label me-5">Name</label></div>
+                            <div><input type="text" className="form-control" id="inputtext" placeholder="Enter Your Full Name" /> </div>
                         </div>
-                        <div className="d-flex col-8">
-                            <label htmlFor="inputDr" className="form-label">Doctor Name</label>
-                            <input type="text" className="form-control" id="inputAddress2" placeholder="Input Your Dr Name " />
+                        <div className="d-flex justify-content-evenly col-md-8">
+                            <div><label htmlFor="inputDr" className="form-label">Doctor Name</label></div>
+                            <div> <input type="text" className="form-control" id="inputAddress2" placeholder="Input Your Dr Name " /></div>
                         </div>
-                        <div class="d-flex col-8 mb-3">
-                            <label htmlFor="inputDr" className="form-label">Prescription</label>
-                            <input type="file" class="form-control" id="inputGroupFile01"  placeholder="Upload Previous Prescription Given by Dr" />
+                        <div class="d-flex justify-content-evenly col-md-8">
+                            <div> <label htmlFor="inputDr" className="form-label me-4">Upload Previous Prescription Given by Dr</label> </div>
+                            <div> <input placeholder="" type="file" class="form-control" id="inputGroupFile01" /> </div>
                         </div>
-                        <div className="d-flex col-8">
-                            <label htmlFor="inputAddress" className="form-label">Address</label>
-                            <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St" />
+                        <div className="d-flex justify-content-evenly col-md-8">
+                            <div><label htmlFor="inputAddress" className="form-label me-5">Address</label></div>
+                            <div><input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St" /></div>
                         </div>
 
-                        <div className="d-flex col-md-8">
-                            <label htmlFor="inputCity" className="form-label me-5">City</label>
-                            <input type="text" className="form-control" id="inputCity" />
-                        </div><br />
-                        <div className=" d-flex col-md-8">
-                            <label htmlFor="inputState" className="form-label me-5">State</label>
-                            <select id="inputState" className="form-select">
+                        <div className="d-flex justify-content-around  col-md-7">
+                            <div> <label htmlFor="inputCity" className="form-label ">City</label></div>
+                            <div>  <select id="inputState" className="form-select me-5">
                                 <option selected>Chittagong</option>
                                 <option>Dhaka</option>
                                 <option>Feni</option>
                                 <option>Barisal</option>
                                 <option>Rajshahi</option>
                                 <option>Jessore</option>
-                            </select>
+                            </select> </div>
+                        </div><br />
+                        <div className=" d-flex justify-content-around  col-md-7">
+                            <div><label htmlFor="inputState" className="form-label ">Branch</label> </div>
+                            <div> <select id="inputState" className="form-select me-5">
+                                <option selected>Agrabad</option>
+                                <option>Motijil</option>
+                                <option>Bonani</option>
+                                <option>Tank Road</option>
+                                <option>Khulshi</option>
+                                <option>Modhupur</option>
+                            </select> </div>
                         </div>
 
                         <div className="col-8">
-                            <div className="form-check d-flex">
-                                <input className="form-check-input me-5" type="checkbox" id="gridCheck" />
-                                <label className="form-check-label" htmlFor="gridCheck">
+                            <div className="form-check d-flex justify-content-center">
+                                <div><input className="form-check-input me-5" type="checkbox" id="gridCheck" /></div>
+                                <div> <label className="form-check-label" htmlFor="gridCheck">
                                     Accept All Privecy & Policy
-                                </label>
+                                </label></div>
                             </div>
                         </div>
                         <div className="col-8">

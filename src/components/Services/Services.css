@@ -14,7 +14,7 @@
         text-transform: uppercase; */
        
 }
-.card-body{
+.cardsbody{
     height: 300px;
 
     display: inline-block;
@@ -27,10 +27,10 @@
     
     transition-property: transform;
 }
-.card-img{
+.cardsimg{
     height: 200px;
 }
-.card-body:hover{
+.cardsbody:hover{
     
     background: linear-gradient(to right, #ffefba1e, #ffffff); 
     transition: 0.5s;

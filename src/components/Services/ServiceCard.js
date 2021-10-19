@@ -1,19 +1,20 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Services.css'
 
-const ServiceCard = (props) => {
+const ServiceCard = ({ service }) => {
     // destructuring
-    const { servicename, aboutservice, img, extraDetails } = props.service;
+    const { key, servicename, aboutservice, img} = service;
 
     return (
         <div className="container-fluid">
             {/* Services card dynamically */}
             <div className="text-start container " >
                 <Col>
-                    <Card className="card-body mb-5  h-100 ">
-                        <Card.Img variant="top card-img " src={img} />
-                        <Card.Body >
+                    <Card className="cardsbody mb-5  h-100 ">
+                        <Card.Img variant="top cardsimg" src={img} />
+                        <Card.Body className="cardsbody" >
                             <Card.Title className="text-center fw-bold">{servicename}</Card.Title>
                             <Card.Text>
                                 <h5>
@@ -24,7 +25,9 @@ const ServiceCard = (props) => {
                             </Card.Text>
                         </Card.Body>
                         <Card.Footer>
-                            <button className="btn btn-outline-dark px-5">Book This Service</button>
+                            <Link to={ `/booking/${key}`}>
+                                <button className="btn btn-outline-dark px-5 border-2 rounded-4 fw-bold fst-italic">Book {servicename.toLowerCase()}</button>
+                            </Link>
                         </Card.Footer>
                     </Card>
                 </Col>
