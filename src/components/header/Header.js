@@ -20,6 +20,7 @@ const Header = () => {
         <Navbar className="p-0 m-0" collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container className="p-0 m-0">
                 <Navbar.Brand className="d-flex align-items-center"><Link to="/home"><img className="w-50" src={logo} alt="" /></Link>
+                  {/* show image & name of login users */}
                     {
                         user.email && <div className="d-flex align-items-center">
                             <img className=" w-25 rounded-circle" src={user.photoURL} alt="" />
@@ -59,7 +60,7 @@ const Header = () => {
 
                     </Nav>
                     <Nav>
-
+                        {/* show login and logout dynamically */}
                         {
                             user.email ?
 

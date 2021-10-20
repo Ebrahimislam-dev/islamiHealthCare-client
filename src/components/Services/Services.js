@@ -12,7 +12,7 @@ const Services = () => {
         <div className='services'>
             <div className="container-fluid  mb-1">
                 <h1 className="heading mb-5 mt-1">
-                    Our <span className="text-danger"> Services </span>
+                    Our <span className="text-danger"> Service's </span>
                 </h1>
                 <Row xs={1} md={4} className="g-3 ">
                     {

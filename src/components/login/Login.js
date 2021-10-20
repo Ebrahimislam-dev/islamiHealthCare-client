@@ -9,7 +9,6 @@ const Login = () => {
 
     const {
         signInUsingGoogle,
-
         error,
         handleNameChange,
         handleRegistration,
@@ -21,7 +20,7 @@ const Login = () => {
     const location = useLocation();
     const history = useHistory();
     const redirect_uri = location.state?.from || '/home'
-
+    // Redirect come from state
     const handleGoogleLogin = () => {
         signInUsingGoogle()
             .then(result => {
@@ -30,7 +29,7 @@ const Login = () => {
     }
 
 
-
+    // Rediretc to home
     const handleEmailLogin = () => {
         processLogin()
             .then(result => {
@@ -50,6 +49,7 @@ const Login = () => {
                             <h1 className="heading fw-bolder fst-italic mt-5 mb-5">{isLogin ? 'Please' : 'Create a'}   <span style={{ color: 'lightblue' }}>  {isLogin ? 'Login' : 'new account here'} </span>   </h1>
 
                             <div>
+                                {/* Registration with email and password */}
                                 <Form onSubmit={handleRegistration}>
 
                                     {!isLogin && <div className="row mb-3">
@@ -82,6 +82,7 @@ const Login = () => {
                                         </Col>
                                     </Form.Group>
                                     <div className="row mb-3 text-danger">{error}</div>
+                                    {/* google login */}
                                     <Form.Group as={Row} >
                                         <Col className="mb-3 d-md-flex align-items-center" sm={{ span: 10, offset: 2 }}>
                                             <Button onClick={handleEmailLogin} type="submit" className="btn btn-success border-5 mb-3 mt-3 fs-5 fst-italic px-5 py-2  text-center">{isLogin ? 'Login' : 'Register'} <i class="fas fa-sign-in-alt"></i>

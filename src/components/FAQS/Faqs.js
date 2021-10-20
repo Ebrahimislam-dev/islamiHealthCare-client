@@ -36,7 +36,7 @@ const Faqs = () => {
                         </Accordion.Item>
                     </Accordion>
                 </div>
-                <div className="col-md-5 mx-5 my-5">
+                <div className=" col-8 col-md-5 mx-5 my-5">
                     <Accordion defaultActiveKey="0" flush>
                         <Accordion.Item eventKey="0">
                             <Accordion.Header>Can I personally meet a doctor at clinic?</Accordion.Header>

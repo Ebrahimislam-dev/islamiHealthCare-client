@@ -17,7 +17,7 @@ const Booking = () => {
                 setDetails(data)
             });
     }, [])
-
+    //filter from json datas
     const singleService = details.filter(service => service.key === servicesId);
     // console.log(singleService);
     return (
@@ -50,7 +50,7 @@ const Booking = () => {
                                             <button className="btn btn-outline-dark px-5 border-2 rounded-4 fw-bold fst-italic">Book Another Service</button>
                                         </Link>
                                         <Link to="/appointments">
-                                            <button  className="btn btn-outline-dark ms-3 px-5 border-2 rounded-4 fw-bold fst-italic">Confirm Booking</button>
+                                            <button className="btn btn-outline-dark ms-3 px-5 border-2 rounded-4 fw-bold fst-italic">Confirm Booking</button>
                                         </Link>
                                     </Card.Footer>
                                 </Card>

@@ -3,6 +3,7 @@ import './Appointment.css'
 const Appointments = () => {
     return (
         <div className="container-fluid">
+            {/* appointment online section */}
             <div className="onlineDr">
                 <h3 className="heading ">ONLINE DOCTOR<span className="text-danger fs-4"> APPOINTMENT</span></h3>
                 <div className="text-start container mb-2">
@@ -23,11 +24,11 @@ const Appointments = () => {
                             - By credit card, debit card, mobile banking, internet banking from payment.uhlbd.com</li>
                         <li>Need to call to verify the payment. Unless payment is made 5-6 hours before telemedicine appointment time, appointment will not be confirmed</li>
                         <li>Patient can send his/her Investigations prior to TM for doctor assessment to appointment@ihc.com</li>
-                    <br />
+                        <br />
                     </ul>
                 </div>
             </div>
-
+            {/* appointment offline section */}
             <div className="offlineDr">
                 <h3 className="heading ">OFFLINE DOCTOR<span className="text-danger fs-4"> APPOINTMENT</span></h3>
                 <div>

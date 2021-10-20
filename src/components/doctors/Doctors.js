@@ -10,7 +10,7 @@ const Doctors = () => {
         <div className='doctors'>
             <div className="container-fluid  mb-1">
                 <h1 className="heading mb-5 mt-1">
-                    Our <span className="text-danger"> doctors </span>
+                    Our <span className="text-danger"> doctor's </span>
                 </h1>
                 <Row xs={1} md={3} className="g-4 ">
                     {

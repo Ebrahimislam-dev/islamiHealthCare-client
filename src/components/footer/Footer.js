@@ -125,13 +125,18 @@ const Footer = () => {
                                         </Link>
                                     </li>
                                     <li className="footer-menu">
+                                        <Link to="/doctors" className="footer-menu text-decoration-none">
+                                            Doctor's
+                                        </Link>
+                                    </li>
+                                    <li className="footer-menu">
                                         <Link to="/about" className="footer-menu text-decoration-none">
                                             About us
                                         </Link>
                                     </li>
                                     <li className="footer-menu">
-                                        <Link to="/contact" className="footer-menu text-decoration-none">
-                                            Contact us
+                                        <Link to="/faqs" className="footer-menu text-decoration-none">
+                                            FAQ's
                                         </Link>
                                     </li>
 
@@ -140,7 +145,7 @@ const Footer = () => {
                             </div>
                         </div>
 
-
+                        {/* footer Service column */}
                         <div className="col-md-2 mt-5">
 
 
@@ -196,7 +201,7 @@ const Footer = () => {
                                 </div>
                                 <div className="mt-3">
                                     <p>
-                                        <Link  className="text-danger">
+                                        <Link className="text-danger">
                                             <i class="fas fa-info-circle"></i>
                                         </Link>
                                         Support: support@patientcarehomeservicebd.com</p>
