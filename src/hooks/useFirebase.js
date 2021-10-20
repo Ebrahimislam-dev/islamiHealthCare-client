@@ -76,7 +76,8 @@ const useFirebase = () => {
                 const user = result.user;
                 console.log(user);
                 setError('');
-                setIsLogin(false);
+                setIsLogin(true);
+                setUser(user);
                 setUserName();
 
 

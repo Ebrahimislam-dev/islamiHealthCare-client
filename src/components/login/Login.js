@@ -81,7 +81,7 @@ const Login = () => {
                                             <Form.Check className="fs-5 text-info fw-bold" label="Already Registerd ?" />
                                         </Col>
                                     </Form.Group>
-                                    <div className="row mb-3 text-danger">{error}</div>
+                                    <div className="row ms-5 mb-3 text-danger">{error}</div>
                                     {/* google login */}
                                     <Form.Group as={Row} >
                                         <Col className="mb-3 d-md-flex align-items-center" sm={{ span: 10, offset: 2 }}>
