@@ -11,7 +11,8 @@ import Home from './components/home/Home';
 import Login from './components/login/Login';
 import NotFound from './components/notFound/NotFound';
 import PrivateRoute from './components/privateRoute/PrivateRoute';
-import Register from './components/register/Register';
+
+import Registers from './components/register/Registers';
 import Services from './components/Services/Services';
 import AuthProvider from './context/AuthProvider';
 
@@ -46,8 +47,8 @@ function App() {
             <Route path="/login">
               <Login></Login>
             </Route>
-            <Route path="/register">
-              <Register></Register>
+            <Route path="/registers">
+              <Registers></Registers>
             </Route>
             <PrivateRoute path="/appointments">
               <Appointments></Appointments>

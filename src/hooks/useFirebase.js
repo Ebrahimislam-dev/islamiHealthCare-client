@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { getAuth, signInWithPopup, signOut, GoogleAuthProvider, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from 'firebase/auth'
+import { getAuth, signInWithPopup, signOut, GoogleAuthProvider, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, updateProfile } from 'firebase/auth'
 import initializeAuthentication from "../firebase/firebase.init";
 
 
@@ -9,10 +9,10 @@ initializeAuthentication();
 
 const useFirebase = () => {
 
-
+    const auth = getAuth();
     const [user, setUser] = useState({});
     const [isLoading, setIsLoading] = useState(true)
-    const auth = getAuth();
+    // email and password reset email
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -21,18 +21,9 @@ const useFirebase = () => {
 
 
 
-// Authenticatopn For email & password
+    // Authenticatopn For email & password
 
-    const handleNameChange = e => {
-        setName(e.target.value);
-    }
-    const handleEmailChange = e => {
-        setEmail(e.target.value);
-    }
 
-    const handlePasswordChange = e => {
-        setPassword(e.target.value)
-    }
 
     const handleRegistration = e => {
         e.preventDefault();
@@ -41,20 +32,32 @@ const useFirebase = () => {
             setError('Password Must be at least 6 characters long.')
             return;
         }
-
-
         if (isLogin) {
             processLogin(email, password);
-            
+
         }
         else {
             registerNewUser(email, password);
         }
 
     }
+    // email and password auth methods
+    const createNewUser = (email, password) => {
+        createUserWithEmailAndPassword(auth, email, password)
+            .then(result => {
+                const user = result.user
+                console.log(user)
+                setError('')
+                verifyEmail()
+            })
+            .catch(error => {
+                setError(error.message)
+            })
+    }
+
 
     const processLogin = (email, password) => {
-        signInWithEmailAndPassword(auth, email, password)
+        return signInWithEmailAndPassword(auth, email, password)
             .then(result => {
                 const user = result.user;
                 console.log(user);
@@ -88,7 +91,27 @@ const useFirebase = () => {
             .then(result => { })
     }
 
-// Authentication For Google login System
+
+    const handleNameChange = e => {
+        setName(e.target.value);
+    }
+    const handleEmailChange = e => {
+        setEmail(e.target.value);
+    }
+    const toggleLogin = (e) => {
+        setIsLogin(e.target.checked)
+    }
+
+    const handlePasswordChange = e => {
+        setPassword(e.target.value)
+    }
+    const verifyEmail = () => {
+        sendEmailVerification(auth.currentUser)
+            .then(result => {
+                console.log(result)
+            })
+    }
+    // Authentication For Google login System
 
     const signInUsingGoogle = () => {
         setIsLoading(true);
@@ -98,6 +121,11 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false));
 
     }
+
+
+
+
+
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -122,6 +150,8 @@ const useFirebase = () => {
         isLoading,
         user,
         signInUsingGoogle,
+        createNewUser,
+
         logOut,
         handleNameChange,
         name,
@@ -130,8 +160,8 @@ const useFirebase = () => {
         handleRegistration,
         error,
         isLogin,
-
-
+        toggleLogin,
+        processLogin,
 
     }
 

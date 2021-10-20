@@ -1,21 +1,38 @@
 import Button from '@restart/ui/esm/Button';
 import React from 'react';
 import useAuth from '../../hooks/useAuth';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 
 
 
 
 
 const Register = () => {
+
+
     const { handleNameChange,
         handleEmailChange,
         handlePasswordChange,
         handleRegistration,
-    
+        handleRegButton,
+        toggleLogin,
+        handleResetPassword,
+        processLogin,
         isLogin,
         singWithGoogle,
         error } = useAuth();
+    const location = useLocation()
+    const history = useHistory()
+    const redirect_url = location.state?.from || '/'
+    console.log('came form', location.state?.from)
+
+    const handleEmailLogin = () => {
+        processLogin()
+            .then(result => {
+                history.push(redirect_url)
+            })
+    }
+
     return (
         <div className="mx-5">
             <form onSubmit={handleRegistration} className="bg-light shadow-lg mt-5">
@@ -54,7 +71,7 @@ const Register = () => {
 
             </form>
             <br />
-            
+
 
             <Button className=" px-3 py-2 me-5" variant="dark" onClick={singWithGoogle}></Button>
             <br />

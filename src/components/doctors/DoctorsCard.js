@@ -20,7 +20,7 @@ const DoctorsCard = (props) => {
             {/* Services card dynamically */}
             <div className="text-start container " >
                 <Col>
-                    <Card className="card-body mb-5  h-100 ">
+                    <Card className="cardsbody mb-5  h-100 ">
 
                         <Card.Img variant="top dr-img" src={img} />
 
