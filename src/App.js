@@ -5,6 +5,7 @@ import Appointments from './components/appointments/Appointments';
 import Booking from './components/Booking/Booking/Booking';
 import Contactus from './components/contact/Contactus';
 import Doctors from './components/doctors/Doctors';
+import Faqs from './components/FAQS/Faqs';
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
 import Home from './components/home/Home';
@@ -30,6 +31,9 @@ function App() {
             </Route>
             <Route path="/services">
               <Services></Services>
+            </Route>
+            <Route path="/faqs">
+              <Faqs></Faqs>
             </Route>
 
             <Route path="/doctors">

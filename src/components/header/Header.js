@@ -51,6 +51,9 @@ const Header = () => {
                         <NavLink to='/contact' activeStyle={active} className='nav-item text-white text-decoration-none'>
                             Contact-Us
                         </NavLink>
+                        <NavLink to='/faqs' activeStyle={active} className='nav-item text-white text-decoration-none'>
+                            FAQ's
+                        </NavLink>
 
 
 
