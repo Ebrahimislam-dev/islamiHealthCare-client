@@ -15,7 +15,7 @@ const Banner = () => {
                 <Carousel.Item interval={1000} >
                     <Carousel.Caption >
                         <div className="  pe-5 pb-5 mb-5 text-center">
-                            <h1 className=" text-black-50 heading">WELCOME TO ISLAMI HEALTH CARE</h1>
+                            <h1 className=" text-black-50 headingBanner">WELCOME TO ISLAMI HEALTH CARE</h1>
                             <p className="fs-4 px-3 text-danger fw-bold fst-italic">We are team of talented doctors making your life happiness</p>
                         </div>
                         <div className="  pb-5 mb-5 me-5 text-center">
