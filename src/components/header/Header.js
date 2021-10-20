@@ -17,9 +17,9 @@ const Header = () => {
         borderBlockEnd: "2px solid #ff0000"
     };
     return (
-        <Navbar className="p-0 m-0" collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar sticky="top" className="p-0 m-0" collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container className="p-0 m-0">
-                <Navbar.Brand className="d-flex align-items-center"><Link to="/home"><img className="w-50" src={logo} alt="" /></Link>
+                <Navbar.Brand className="d-flex align-items-center"><Link to="/home"><img className="w-50 me-5" src={logo} alt="" /></Link>
                   {/* show image & name of login users */}
                     {
                         user.email && <div className="d-flex align-items-center">
